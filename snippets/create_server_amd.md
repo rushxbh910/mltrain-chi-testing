@@ -262,34 +262,6 @@ s.execute("mkdir -p nvtop/build && cd nvtop/build && cmake .. -DAMDGPU_SUPPORT=O
 
 ::: {.cell .markdown}
 
-###  Build a container image - for MLFlow section
-
-
-Finally, we will build a container image in which to work in the MLFlow section, that has:
-
-* a Jupyter notebook server
-* Pytorch and Pytorch Lightning
-* ROCm, which allows deep learning frameworks like Pytorch to use the AMD GPU accelerator
-* and MLFlow
-
-You can see our Dockerfile for this image at: [Dockerfile.jupyter-torch-mlflow-rocm](https://github.com/teaching-on-testbeds/mltrain-chi/tree/main/docker/Dockerfile.jupyter-torch-mlflow-rocm)
-
-
-Building this container will take a **very long** time (ROCm is huge). But that's OK: we can get it started and then continue to the next section while it builds in the background, since we don't need this container immediately. We just need it to finish by the "Start a Jupyter server" subsection of the "Start the tracking server" section.
-
-
-:::
-
-
-::: {.cell .code}
-```python
-s.execute("docker build -t jupyter-mlflow -f mltrain-chi/docker/Dockerfile.jupyter-torch-mlflow-rocm .")
-```
-:::
-
-
-::: {.cell .markdown}
-
 Leave that cell running, and in the meantime, open an SSH sesson on your server. From your local terminal, run
 
 ```

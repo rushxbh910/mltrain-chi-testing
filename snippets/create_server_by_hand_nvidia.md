@@ -118,26 +118,3 @@ sudo apt update
 sudo apt -y install nvtop
 ```
 
-###  Build a container image - for MLFlow section
-
-
-Finally, we will build a container image in which to work in the MLFlow section, that has:
-
-* a Jupyter notebook server
-* Pytorch and Pytorch Lightning
-* CUDA, which allows deep learning frameworks like Pytorch to use the NVIDIA GPU accelerator
-* and MLFlow
-
-You can see our Dockerfile for this image at: [Dockerfile.jupyter-torch-mlflow-cuda](https://github.com/teaching-on-testbeds/mltrain-chi/tree/main/docker/Dockerfile.jupyter-torch-mlflow-cuda)
-
-
-Building this container may take a bit of time, but that's OK: we can get it started and then continue to the next section while it builds in the background, since we don't need this container immediately.
-
-```bash
-# run on node-mltrain
-docker build -t jupyter-mlflow -f mltrain-chi/docker/Dockerfile.jupyter-torch-mlflow-cuda .
-```
-
-In the meantime, open another SSH session on "node-mltrain", so that you can continue with the next section.
-
-

@@ -156,25 +156,5 @@ cd ~  # return to home directory
 ```
 
 
-###  Build a container image - for MLFlow section
 
-
-Finally, we will build a container image in which to work in the MLFlow section, that has:
-
-* a Jupyter notebook server
-* Pytorch and Pytorch Lightning
-* ROCm, which allows deep learning frameworks like Pytorch to use the AMD GPU accelerator
-* and MLFlow
-
-You can see our Dockerfile for this image at: [Dockerfile.jupyter-torch-mlflow-rocm](https://github.com/teaching-on-testbeds/mltrain-chi/tree/main/docker/Dockerfile.jupyter-torch-mlflow-rocm)
-
-
-Building this container will take a **very long** time (ROCm is huge). But that's OK: we can get it started and then continue to the next section while it builds in the background, since we don't need this container immediately. We just need it to finish by the "Start a Jupyter server" subsection of the "Start the tracking server" section.
-
-```bash
-# run on node-mltrain
-docker build -t jupyter-mlflow -f mltrain-chi/docker/Dockerfile.jupyter-torch-mlflow-rocm .
-```
-
-In the meantime, open another SSH session on "node-mltrain", so that you can continue with the next section.
 
