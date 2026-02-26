@@ -15,4 +15,5 @@ RUN amdgpu-install --usecase=rocm -y && rm *.deb
 RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/rocm6.2 \
     'torch' \
     'torchaudio' \
-    'torchvision'
+    'torchvision' \
+    'lightning'
