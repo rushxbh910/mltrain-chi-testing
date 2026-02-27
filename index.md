@@ -378,7 +378,7 @@ Open a terminal inside this Jupyter environment ("File > New > New Terminal") an
 ```bash
 # run in a terminal inside jupyter container
 cd ~/work
-git clone https://github.com/teaching-on-testbeds/gourmetgram-train -b lightning-minio
+git clone https://github.com/teaching-on-testbeds/gourmetgram-train -b lightning
 ```
 
 In the `gourmetgram-train` directory, open `train.py`, and view it directly there.
@@ -470,7 +470,7 @@ It is simple to [wrap a Pytorch Lightning script with Ray Train](https://docs.ra
 cd ~/work/gourmetgram-train
 git stash # stash any changes you made to the current branch
 git fetch -a
-git switch ray-minio
+git switch ray
 cd ~/work
 ```
 
@@ -636,7 +636,7 @@ Fault tolerance is configured in another branch
 cd ~/work/gourmetgram-train
 git stash # stash any changes you made to the current branch
 git fetch -a
-git switch fault_tolerance-minio
+git switch fault_tolerance
 cd ~/work
 ```
 
@@ -736,7 +736,7 @@ Switch to the `tune` branch to see this version of the code -
 cd ~/work/gourmetgram-train
 git stash # stash any changes you made to the current branch
 git fetch -a
-git switch tune-minio
+git switch tune
 cd ~/work
 ```
 
